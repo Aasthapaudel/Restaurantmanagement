@@ -10,6 +10,8 @@
 </head>
 
 <body>
+<div class="container-scroller">
+
    @include('admin.navbar')
             <!-- main-panel ends -->
         </div>
