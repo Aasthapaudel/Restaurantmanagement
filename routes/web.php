@@ -19,6 +19,7 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 Route::get('/',[HomeController::class,'index']);
+Route::get('/',[HomeController::class,'index']);
 Route::get('redirects',[HomeController::class,'redirects']);
 Route::get('/users',[AdminController::class,'user']);
 Route::get('/foodmenu',[AdminController::class,'foodmenu']);

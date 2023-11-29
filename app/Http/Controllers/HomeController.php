@@ -5,13 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 // use App\Http\Controllers\Auth;
+use App\Models\User;
+use App\Models\Food;
 
 class HomeController extends Controller
 {
     //
     public function index()
     {
-        return view('home');
+        $data=food::all();
+
+        return view('home',compact('data'));
     }
     public function redirects()
     {
