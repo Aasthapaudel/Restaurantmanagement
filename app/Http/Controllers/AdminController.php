@@ -20,12 +20,21 @@ class AdminController extends Controller
         return redirect()->back();
         // return view('admin.users',compact('data'));
     }
+    public function deletemenu($id)
+    {
+        $data=food::find($id);
+        $data->delete();
+        return redirect()->back();
+        // return view('admin.users',compact('data'));
+    }
     public function foodmenu()
     {
+        $data=food::all();
+
         // $data=user::find($id);
         // $data->delete();
         // return redirect()->back();
-        return view('admin.foodmenu');
+        return view('admin.foodmenu',compact('data'));
     }
 
     public function upload(Request $request)
