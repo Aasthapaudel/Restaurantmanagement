@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Food;
+use App\Models\Reservation;
 class AdminController extends Controller
 {
     //
@@ -72,6 +73,32 @@ $data->description=$request->description;
 $data->save();
 return redirect()->back();
 
+    }
+
+
+    public function reservation(Request $request)
+    {
+         $data=new reservation;
+// $image=$request->image;
+// $imagename=time().'.'.$image->getClientOriginalExtension();
+// $request->image->move('foodimage',$imagename);
+// $data->image=$imagename;
+$data->name=$request->name;
+$data->email=$request->email;
+$data->phone=$request->phone;
+$data->guest=$request->guest;
+$data->date=$request->date;
+$data->time=$request->time;
+$data->message=$request->message;
+$data->save();
+
+        // te();
+        return redirect()->back();
+        // return view('admin.foodmenu');
+    }
+    public function viewreservation(){
+        $data=reservation::all();
+        return view('admin.adminreservation',compact("data"));
     }
 
 }

@@ -21,6 +21,9 @@ use App\Http\Controllers\AdminController;
 Route::get('/',[HomeController::class,'index']);
 Route::get('/',[HomeController::class,'index']);
 Route::get('redirects',[HomeController::class,'redirects']);
+Route::post('/reservation',[AdminController::class,'reservation']);
+Route::get('/viewreservation',[AdminController::class,'viewreservation']);
+
 Route::get('/users',[AdminController::class,'user']);
 Route::get('/foodmenu',[AdminController::class,'foodmenu']);
 Route::get('/deletemenu/{id}',[AdminController::class,'deletemenu']);
