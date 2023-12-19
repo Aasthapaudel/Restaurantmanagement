@@ -31,7 +31,11 @@ Route::get('/deletemenu/{id}',[AdminController::class,'deletemenu']);
 
 Route::get('/updatemenu/{id}',[AdminController::class,'updatemenu']);
 Route::post('/update/{id}',[AdminController::class,'update']);
+
 Route::post('/uploadchef',[AdminController::class,'uploadchef']);
+Route::get('/updatechef/{id}',[AdminController::class,'updatechef']);
+Route::post('/updatefoodchef/{id}',[AdminController::class,'updatefoodchef']);
+Route::get('/deletechef/{id}',[AdminController::class,'deletechef']);
 
 Route::get('/deleteuser/{id}',[AdminController::class,'deleteuser']);
 Route::post('/uploadfood',[AdminController::class,'upload']);
