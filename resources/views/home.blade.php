@@ -86,8 +86,21 @@ https://templatemo.com/tm-558-klassy-cafe
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
 
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
+
+                            <li class="scroll-to-section"><a href="#reservation">
+                                    @auth
+                                    <a href="{{url('/showcart',Auth::user()->id)}}">
+                                    Cart{{$count}}
+                                   @endauth
+
+                            @guest
+                            Cart[0]
+                            @endguest
+                            </a>
+                            </li>
+
                             <li>
-                                @if (Route::has('login'))
+                    @if (Route::has('login'))
                                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                     @auth
                             <li>
@@ -95,6 +108,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                 </x-app-layout>
                             </li>
                             @else
+
                             <li>
                                 <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
                             </li>
@@ -104,15 +118,16 @@ https://templatemo.com/tm-558-klassy-cafe
                                     class="ml-4 text-sm text-gray-700 underline">Register</a>
 
                             </li>
+
+
                             @endif
                             @endauth
+
                 </div>
                 @endif
                 </li>
                 </ul>
-                <a class='menu-trigger'>
-                    <span>Menu</span>
-                </a>
+
                 <!-- ***** Menu End ***** -->
                 </nav>
             </div>
@@ -169,14 +184,14 @@ https://templatemo.com/tm-558-klassy-cafe
     <!-- ***** Main Banner Area End ***** -->
 
     <!-- ***** About Area Starts ***** -->
-   @include('food')
+    @include('food')
     <!-- ***** Menu Area Ends ***** -->
-@include('foodchef')
+    @include('foodchef')
     <!-- ***** Chefs Area Starts ***** -->
-   <!-- **** Chefs Area Ends ***** --> 
+    <!-- **** Chefs Area Ends ***** -->
 
     <!-- ***** Reservation Us Area Starts ***** -->
-   @include('reservation')
+    @include('reservation')
     <!-- ***** Reservation Area Ends ***** -->
 
     <!-- ***** Menu Area Starts ***** -->
