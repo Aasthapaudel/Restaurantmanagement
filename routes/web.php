@@ -20,28 +20,28 @@ use App\Http\Controllers\AdminController;
 // });
 Route::get('/',[HomeController::class,'index']);
 Route::get('/',[HomeController::class,'index']);
-Route::get('redirects',[HomeController::class,'redirects']);
-Route::post('/reservation',[AdminController::class,'reservation']);
-Route::get('/viewreservation',[AdminController::class,'viewreservation']);
+Route::get('redirects',[HomeController::class,'redirects'])->middleware('auth');
+Route::post('/reservation',[AdminController::class,'reservation'])->middleware('auth');
+Route::get('/viewreservation',[AdminController::class,'viewreservation'])->middleware('auth');
 
-Route::get('/viewchef',[AdminController::class,'viewchef']);
-Route::get('/users',[AdminController::class,'user']);
-Route::get('/foodmenu',[AdminController::class,'foodmenu']);
-Route::get('/deletemenu/{id}',[AdminController::class,'deletemenu']);
+Route::get('/viewchef',[AdminController::class,'viewchef'])->middleware('auth');
+Route::get('/users',[AdminController::class,'user'])->middleware('auth');
+Route::get('/foodmenu',[AdminController::class,'foodmenu'])->middleware('auth');
+Route::get('/deletemenu/{id}',[AdminController::class,'deletemenu'])->middleware('auth');
 
-Route::get('/updatemenu/{id}',[AdminController::class,'updatemenu']);
-Route::post('/update/{id}',[AdminController::class,'update']);
+Route::get('/updatemenu/{id}',[AdminController::class,'updatemenu'])->middleware('auth');
+Route::post('/update/{id}',[AdminController::class,'update'])->middleware('auth');
 
-Route::post('/uploadchef',[AdminController::class,'uploadchef']);
-Route::get('/updatechef/{id}',[AdminController::class,'updatechef']);
-Route::post('/updatefoodchef/{id}',[AdminController::class,'updatefoodchef']);
-Route::get('/deletechef/{id}',[AdminController::class,'deletechef']);
-Route::post('/addcart/{id}',[HomeController::class,'addcart']);
+Route::post('/uploadchef',[AdminController::class,'uploadchef'])->middleware('auth');
+Route::get('/updatechef/{id}',[AdminController::class,'updatechef'])->middleware('auth');
+Route::post('/updatefoodchef/{id}',[AdminController::class,'updatefoodchef'])->middleware('auth');
+Route::get('/deletechef/{id}',[AdminController::class,'deletechef'])->middleware('auth');
+Route::post('/addcart/{id}',[HomeController::class,'addcart'])->middleware('auth');
 
-Route::get('/showcart/{id}',[HomeController::class,'showcart']);
+Route::get('/showcart/{id}',[HomeController::class,'showcart'])->middleware('auth');
 
-Route::get('/deleteuser/{id}',[AdminController::class,'deleteuser']);
-Route::post('/uploadfood',[AdminController::class,'upload']);
+Route::get('/deleteuser/{id}',[AdminController::class,'deleteuser'])->middleware('auth');
+Route::post('/uploadfood',[AdminController::class,'upload'])->middleware('auth');
 
 Route::middleware([
     'auth:sanctum',
