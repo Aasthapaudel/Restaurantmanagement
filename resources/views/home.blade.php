@@ -12,7 +12,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title>Klassy Cafe - Restaurant HTML Template</title>
+        <style>footer {
+            width: 100%;
+            background-color: #f8f9fa; /* or whatever background color you want */
+            padding: 20px 0;
+            text-align: center; /* Ensure text is centered */
+        }
+
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer .container .col-lg-4,
+        footer .container .col-xs-12 {
+            flex: 1;
+            padding: 10px;
+        }
+
+        footer .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .social-icons li {
+            margin: 0 10px;
+        }
+
+        footer .social-icons li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        footer .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Make sure the nav uses flexbox */
+.main-nav ul.nav {
+    display: flex;
+    align-items: center;  /* Align items vertically in the center */
+}
+
+/* Target the cart item specifically */
+.main-nav ul.nav li.cart-item {
+    margin-left: auto; /* Push the cart to the far right */
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+}
+
+/* Optionally, adjust the margin of the cart count link */
+.main-nav ul.nav li.cart-item a {
+    margin-top: 0;
+}
+
+        </style>
+    <title>khajaghar</title>
     <!--
 
 TemplateMo 558 Klassy Cafe
@@ -53,8 +115,8 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+                        <a href="{{url('/home')}}" class="logo">
+                            <img src="assets/images/klassy-logo.png" align="Khajaghar">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -74,7 +136,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         -->
                             <li class="scroll-to-section"><a href="#menu">Menu</a></li>
                             <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>
-                            <li class="submenu">
+                            {{-- <li class="submenu">
                                 <a href="javascript:;">Features</a>
                                 <ul>
                                     <li><a href="#">Features Page 1</a></li>
@@ -82,7 +144,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                     <li><a href="#">Features Page 3</a></li>
                                     <li><a href="#">Features Page 4</a></li>
                                 </ul>
-                            </li>
+                            </li> --}}
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
 
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
@@ -93,9 +155,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                     Cart{{$count}}
                                    @endauth
 
-                            {{-- @guest
+                            @guest
                             Cart[0]
-                            @endguest --}}
+                            @endguest
                             </a>
                             </li>
 
@@ -497,18 +559,19 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                        <a href="{{url('/home')}}"><img src="assets/images/white-logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12">
                     <div class="left-text-content">
-                        <p>© Copyright Klassy Cafe Co.
+                        <p>© Copyright Aasthapaudel
 
-                            <br>Design: TemplateMo
+                            <br>Developer
                         </p>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </footer>
 

@@ -59,8 +59,8 @@ https://templatemo.com/tm-558-klassy-cafe
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                        <li class="scroll-to-section"><a href="{{url('/home')}}" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="{{url('/home')}}">About</a></li>
 
                             <!--
                             <li class="submenu">
@@ -72,9 +72,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                 </ul>
                             </li>
                         -->
-                            <li class="scroll-to-section"><a href="#menu">Menu</a></li>
-                            <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>
-                            <li class="submenu">
+                            <li class="scroll-to-section"><a href="{{url('/home')}}">Menu</a></li>
+                            <li class="scroll-to-section"><a href="{{url('/home')}}">Chefs</a></li>
+                            {{-- <li class="submenu">
                                 <a href="javascript:;">Features</a>
                                 <ul>
                                     <li><a href="#">Features Page 1</a></li>
@@ -82,10 +82,10 @@ https://templatemo.com/tm-558-klassy-cafe
                                     <li><a href="#">Features Page 3</a></li>
                                     <li><a href="#">Features Page 4</a></li>
                                 </ul>
-                            </li>
+                            </li> --}}
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
 
-                            <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
+                            <li class="scroll-to-section"><a href="{{url('/home')}}">Contact Us</a></li>
 
                             <li class="scroll-to-section">
                                 <a href="#reservation">
