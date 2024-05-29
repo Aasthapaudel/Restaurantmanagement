@@ -17,6 +17,10 @@
     <body>
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
+            <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+                <a class="" href="{{url('/home')}}">Go to Site</a>
+
+            </div>
         </div>
     </body>
 </html>

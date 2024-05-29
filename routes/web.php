@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Models\Cart;
+use App\Models\User;
+use App\Models\food;
+use App\Models\foodchef;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +19,18 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/',[HomeController::class,'index']);
-Route::get('/',[HomeController::class,'index']);
+Route::get('/', function () {
+    $data=food::all();
+        $data2=foodchef::all();
+        $user_id = Auth::id();
+
+        $count=cart::where('user_id',$user_id)->count();
+
+
+        return view('home',compact('data','data2','count'));
+});
+Route::get('/home',[HomeController::class,'index']);
+// Route::get('/',[HomeController::class,'index']);
 Route::get('redirects',[HomeController::class,'redirects'])->middleware('auth');
 Route::post('/reservation',[AdminController::class,'reservation'])->middleware('auth');
 Route::get('/viewreservation',[AdminController::class,'viewreservation'])->middleware('auth');

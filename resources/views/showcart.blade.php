@@ -53,7 +53,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="{{url('/home')}}" class="logo">
                             <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
                         </a>
                         <!-- ***** Logo End ***** -->
@@ -87,17 +87,18 @@ https://templatemo.com/tm-558-klassy-cafe
 
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
 
-                            <li class="scroll-to-section"><a href="#reservation">
+                            <li class="scroll-to-section">
+                                <a href="#reservation">
                                     @auth
-                            <a href="{{url('/showcart',Auth::user()->id)}}">
-                                    Cart{{$count}}
-                             </a>
-                            @endauth
+                                        <a href="{{ url('/showcart', Auth::user()->id) }}">
+                                            Cart{{ $count }}
+                                        </a>
+                                    @endauth
 
-                            @guest
-                            Cart[0]
-                            @endguest
-                            </a>
+                                    @guest
+                                        Cart[0]
+                                    @endguest
+                                </a>
                             </li>
 
                             <li>

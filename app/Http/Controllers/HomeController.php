@@ -17,8 +17,12 @@ class HomeController extends Controller
     {
         $data=food::all();
         $data2=foodchef::all();
+        $user_id = Auth::id();
 
-        return view('home',compact('data','data2'));
+        $count=cart::where('user_id',$user_id)->count();
+
+
+        return view('home',compact('data','data2','count'));
     }
     public function redirects()
     {

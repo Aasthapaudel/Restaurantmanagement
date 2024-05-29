@@ -1,6 +1,12 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+                <a class="" href="{{url('/home')}}">Go to Site</a>
+
+            </div>
+            <br>
+            <br>
             {{ __('Profile') }}
         </h2>
     </x-slot>

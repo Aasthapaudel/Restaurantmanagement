@@ -93,9 +93,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                     Cart{{$count}}
                                    @endauth
 
-                            @guest
+                            {{-- @guest
                             Cart[0]
-                            @endguest
+                            @endguest --}}
                             </a>
                             </li>
 

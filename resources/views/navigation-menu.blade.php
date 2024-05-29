@@ -3,9 +3,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
+
                 <!-- Logo -->
                 <!-- <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    {{-- <a href="{{ route('dashboard') }}"> --}}
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div> -->
@@ -159,6 +160,7 @@
 
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
+                
                 <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
