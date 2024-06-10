@@ -19,6 +19,16 @@ use App\Models\foodchef;
 |
 */
 
+Route::get('/home', function () {
+    $data=food::all();
+        $data2=foodchef::all();
+        $user_id = Auth::id();
+
+        $count=cart::where('user_id',$user_id)->count();
+
+
+        return view('home',compact('data','data2','count'));
+});
 Route::get('/', function () {
     $data=food::all();
         $data2=foodchef::all();
@@ -30,8 +40,8 @@ Route::get('/', function () {
         return view('home',compact('data','data2','count'));
 });
 // Route::get('/home',[HomeController::class,'index']);
-Route::get('/home',[HomeController::class,'index']);
-Route::get('',[HomeController::class,'redirects'])->middleware('auth','IsAdmin');
+Route::get('/chome',[HomeController::class,'index']);
+Route::get('/ahome',[HomeController::class,'redirects'])->middleware('auth','IsAdmin');
 Route::post('/reservation',[AdminController::class,'reservation'])->middleware('auth','IsAdmin');
 Route::get('/viewreservation',[AdminController::class,'viewreservation'])->middleware('auth','IsAdmin');
 
