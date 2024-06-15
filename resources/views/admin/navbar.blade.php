@@ -9,11 +9,11 @@
               </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-between">
-                        <a href="https://www.bootstrapdash.com/product/corona-free/"><i
-                                class="mdi mdi-home me-3 text-white"></i></a>
-                        <button id="bannerClose" class="btn border-0 p-0">
+                        {{-- <a href="https://www.bootstrapdash.com/product/corona-free/"><i --}}
+                                {{-- class="mdi mdi-home me-3 text-white"></i></a> --}}
+                        {{-- <button id="bannerClose" class="btn border-0 p-0">
                             <i class="mdi mdi-close text-white me-0"></i>
-                        </button>
+                        </button> --}}
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
                 <a class="sidebar-brand brand-logo" href="{{url('/home')}}"><img src="admin/assets/images/logo.svg"
                         alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini" href="{{url('/home')}}"><img src="admin/assets/images/logo-mini.svg"
+                <a class="sidebar-brand brand-logo-mini" href="{{url('/home')}}">KhajaGhar<img src=""
                         alt="logo" /></a>
             </div>
             <ul class="nav">

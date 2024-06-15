@@ -552,7 +552,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         <ul class="social-icons">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            {{-- <li><a href="#"><i class="fa fa-linkedin"></i></a></li> --}}
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
@@ -562,12 +562,13 @@ https://templatemo.com/tm-558-klassy-cafe
                         <a href="{{url('/home')}}"><img src="assets/images/white-logo.png" alt=""></a>
                     </div>
                 </div>
+            {{-- </div> --}}
+            <br>
                 <div class="col-lg-4 col-xs-12">
                     <div class="left-text-content">
-                        <p>© Copyright Aasthapaudel
+                       <h2> <p>© Copyright Aasthapaudel
 
-                            <br>Developer
-                        </p>
+                       </p></h2>
                     </div>
                 </div>
             </div>
