@@ -118,6 +118,14 @@
                     </a>
                 </li>
                 <li class="nav-item menu-items">
+                    <a class="nav-link" href="{{ url('/orderitem')}}">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-playlist-play"></i>
+                        </span>
+                        <span class="menu-title">OrderItem</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
                     <a class="nav-link" href="{{url('/viewchef')}}">
                         <span class="menu-icon">
                             <i class="mdi mdi-table-large"></i>

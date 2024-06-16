@@ -14,7 +14,7 @@
                                 <div class="phone">
                                     <i class="fa fa-phone"></i>
                                     <h4>Phone Numbers</h4>
-                                    <span><a href="#">080-090-0990</a><br><a href="#">080-090-0880</a></span>
+                                    <span><a href="email">080-090-0990</a><br><a href="#">080-090-0880</a></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">

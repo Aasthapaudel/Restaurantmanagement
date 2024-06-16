@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Food;
 use App\Models\Reservation;
 use App\Models\foodchef;
+use App\Models\Cart;
 class AdminController extends Controller
 {
     //
@@ -104,6 +105,10 @@ $data->save();
 public function viewchef(){
     $data=foodchef::all();
     return view('admin.adminchef',compact('data'));
+}
+public function OrderItem(){
+    $OrderItems=Cart::all();
+    return view('admin.orderitem',compact('OrderItems'));
 }
 public function uploadchef( Request $request){
     $data=new foodchef;

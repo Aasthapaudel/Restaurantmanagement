@@ -46,6 +46,7 @@ Route::post('/reservation',[AdminController::class,'reservation'])->middleware('
 Route::get('/viewreservation',[AdminController::class,'viewreservation'])->middleware('auth','IsAdmin');
 
 Route::get('/viewchef',[AdminController::class,'viewchef'])->middleware('auth','IsAdmin');
+Route::get('/orderitem',[AdminController::class,'OrderItem'])->middleware('auth','IsAdmin');
 Route::get('/users',[AdminController::class,'user'])->middleware('auth','IsAdmin');
 Route::get('/foodmenu',[AdminController::class,'foodmenu'])->middleware('auth','IsAdmin');
 Route::get('/deletemenu/{id}',[AdminController::class,'deletemenu'])->middleware('auth','IsAdmin');
