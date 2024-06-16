@@ -14,14 +14,14 @@
                                 <div class="phone">
                                     <i class="fa fa-phone"></i>
                                     <h4>Phone Numbers</h4>
-                                    <span><a href="email">080-090-0990</a><br><a href="#">080-090-0880</a></span>
+                                    <span><a href="phoneto:">080-090-0990</a><br><a href="#">080-090-0880</a></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="message">
                                     <i class="fa fa-envelope"></i>
                                     <h4>Emails</h4>
-                                    <span><a href="#">khajaghar@company.com</a><br><a href="#">khajaghar@company.com</a></span>
+                                    <span><a href="mailto:khajaghar@company.com">khajaghar@company.com</a><br><a href="mailto:khajaghar@company.com">khajaghar@info.com</a></span>
                                 </div>
                             </div>
                         </div>
