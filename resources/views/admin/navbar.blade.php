@@ -130,7 +130,7 @@
                         <span class="menu-icon">
                             <i class="mdi mdi-chart-bar"></i>
                         </span>
-                        <span class="menu-title">Reservation>
+                        <span class="menu-title">Reservation
                     </a>
                 </li>
                 <!-- <li class="nav-item menu-items">

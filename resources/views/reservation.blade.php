@@ -21,7 +21,7 @@
                                 <div class="message">
                                     <i class="fa fa-envelope"></i>
                                     <h4>Emails</h4>
-                                    <span><a href="#">hello@company.com</a><br><a href="#">info@company.com</a></span>
+                                    <span><a href="#">khajaghar@company.com</a><br><a href="#">khajaghar@company.com</a></span>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12">
-                                    <input type="time">
+                                    <input type="time" name="time" id="time">
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
