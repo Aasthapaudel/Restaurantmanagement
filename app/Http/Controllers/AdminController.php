@@ -8,6 +8,7 @@ use App\Models\Food;
 use App\Models\Reservation;
 use App\Models\foodchef;
 use App\Models\Cart;
+use App\Models\Order;
 class AdminController extends Controller
 {
     //
@@ -150,5 +151,22 @@ public function deletechef($id){
     $data->delete();
     return redirect()->back();
 
+}
+public function approve($id)
+{
+    $order = Cart::findOrFail($id);
+    $order->status = 'approved';
+    $order->save();
+
+    return redirect()->back()->with('success', 'Order approved successfully.');
+}
+
+public function cancel($id)
+{
+    $order = Cart::findOrFail($id);
+    $order->status = 'cancelled';
+    $order->save();
+
+    return redirect()->back()->with('success', 'Order cancelled successfully.');
 }
 }

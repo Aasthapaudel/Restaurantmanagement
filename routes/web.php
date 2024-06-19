@@ -61,6 +61,8 @@ Route::get('/deletechef/{id}',[AdminController::class,'deletechef'])->middleware
 Route::post('/addcart/{id}',[HomeController::class,'addcart'])->middleware('auth');
 
 Route::get('/showcart/{id}',[HomeController::class,'showcart'])->middleware('auth');
+Route::put('/orders/{id}/approve', [AdminController::class, 'approve'])->name('orders.approve');
+Route::put('/orders/{id}/cancel', [AdminController::class, 'cancel'])->name('orders.cancel');
 
 Route::get('/deleteuser/{id}',[AdminController::class,'deleteuser'])->middleware('auth','IsAdmin');
 Route::post('/uploadfood',[AdminController::class,'upload'])->middleware('auth','IsAdmin');
